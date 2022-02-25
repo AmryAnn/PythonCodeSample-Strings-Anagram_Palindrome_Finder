@@ -78,16 +78,12 @@ parsed_list = parse_page(web_content)
 data_strings = clean_data(parsed_list)
 data_words = split_sentence(data_strings)
 
-<<<<<<< HEAD
+print("\n\nAnagrams:")
 anagrams = anpatools.Anagram()
 anagram_groups = anagrams.find_anagrams(data_words)
 print(anagram_groups)
-=======
-anagrams = [anpatools.Anagram(n) for n in data_strings]
-for anagram in anagrams[:5]:
-    print(anagram.get_anagrams())
->>>>>>> main
 
+print("\n\nPalindromes:")
 palindromes = [anpatools.Palyndrome(n) for n in data_words]
 for palyndrome in palindromes:
     pal = palyndrome.find_palindromes()
